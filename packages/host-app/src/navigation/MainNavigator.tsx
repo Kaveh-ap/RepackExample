@@ -7,7 +7,7 @@ import {
 
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
-import MiniAppScreen from '../screens/Mini-app-screen';
+import MiniAppScreen from '../screens/MiniAppScreen';
 
 export type MainStackParamList = {
   Home: undefined;
