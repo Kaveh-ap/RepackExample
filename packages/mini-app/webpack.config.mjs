@@ -236,6 +236,9 @@ export default (env) => {
       }),
       new Repack.plugins.ModuleFederationPlugin({
         name: 'MiniApp',
+        exposes: {
+          './MiniApp': './src/navigation/MainNavigator'
+        },
         shared: {
             react: {
                 singleton: true,
@@ -269,15 +272,6 @@ export default (env) => {
             },
         },
     }),
-    new Repack.plugins.ModuleFederationPlugin({
-      name: 'MiniApp',
-      exposes: {
-        './MiniApp': './src/navigation/MainNavigator'
-      },
-      shared: {
-        //...
-      }
-    })
     ],
   };
 };
